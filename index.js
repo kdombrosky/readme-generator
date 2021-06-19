@@ -50,30 +50,109 @@ const questions = [
                 return false;
             }
         }
-    } 
+    },
+    { // Usage
+        type: 'input',
+        name: 'usage',
+        message: 'Please provide instructions and examples for use:',
+        validate: usageInput => {
+            if(usageInput) {
+                return true;
+            } else { 
+                console.log('You must enter usage instructions.');
+                return false;
+            }
+        }
+    },
+    { // Contributing
+        type: 'input',
+        name: 'contributing',
+        message: 'Please list your collaborators, or if none enter your own name.',
+        validate: collabInput => {
+            if(collabInput) {
+                return true;
+            } else { 
+                console.log('You must enter at least one contributor.');
+                return false;
+            }
+        }
+    },
+    { // Tests
+        type: 'input',
+        name: 'tests',
+        message: 'Please explain test instructions: ',
+        validate: testInput => {
+            if(testInput) {
+                return true;
+            } else { 
+                console.log('You must enter some test instructions.');
+                return false;
+            }
+        }
+    },
+    { // Questions - GitHub Username -> generate link to github profile
+        type: 'input',
+        name: 'usernameQuestion',
+        message: 'Please enter your GitHub username: ',
+        validate: usernameInput => {
+            if(usernameInput) {
+                return true;
+            } else { 
+                console.log('You must enter your username.');
+                return false;
+            }
+        }
+    },
+    { // Questions - email address -> add instructions on how to reach 
+        type: 'input',
+        name: 'emailQuestion',
+        message: 'Please enter your email: ',
+        validate: emailInput => {
+            if(emailInput) {
+                return true;
+            } else { 
+                console.log('You must enter your email.');
+                return false;
+            }
+        }
+    }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/readme.md', data, err => {
+            // if unsuccessful, reject Promise and send error to Promise's .catch() method
+            if(err) {
+                reject(err);
+                return;
+            }
+            // if successful, resolve Promise and send data to .then() method
+            resolve({
+                ok: true,
+                message: 'File created!'
+            });
+        });
+    });
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
         .then(readmeData => {
-            console.log(readmeData);
             return generateMarkdown(readmeData);
         })
         .then(generateMarkdownResponse => {
             console.log(generateMarkdownResponse);
+            let fileName = "./dist/readme.md";
+            return writeToFile(fileName,generateMarkdownResponse)
+        })
+        .then(writeToFileResponse => {
+            console.log(writeToFileResponse.message);
+        })
+        .catch(err => {
+            console.log(err);
         });
-    // send answers to generateMarkdown
-    // conditionally generate page 
-    // receive page object back
-    // write to file 
-    // copy file? to new folder? 
-    // catch an error if chaining promisess
 };
 
 // Function call to initialize app
