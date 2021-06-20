@@ -115,13 +115,19 @@ const questions = [
                 return false;
             }
         }
+    },
+    {   // License if any
+        type: 'checkbox',
+        name: 'license',
+        message: 'What licenses do you have? (Check all that apply, press "Enter" for no license)',
+        choices: ['MIT', 'Apache License 2.0', 'ISC', 'GNU GPLv3', 'GNU GPLv2']
     }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/readme.md', data, err => {
+        fs.writeFile('./dist/README.md', data, err => {
             // if unsuccessful, reject Promise and send error to Promise's .catch() method
             if(err) {
                 reject(err);
@@ -140,12 +146,11 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
         .then(readmeData => {
+            console.log(readmeData.license);
             return generateMarkdown(readmeData);
         })
         .then(generateMarkdownResponse => {
-            console.log(generateMarkdownResponse);
-            let fileName = "./dist/readme.md";
-            return writeToFile(fileName,generateMarkdownResponse)
+            return writeToFile(generateMarkdownResponse)
         })
         .then(writeToFileResponse => {
             console.log(writeToFileResponse.message);
