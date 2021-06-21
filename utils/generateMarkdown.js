@@ -74,7 +74,7 @@ ${data.tests}
 
 ## Questions
 My GitHub: [${data.usernameQuestion}](https://github.com/${data.usernameQuestion}) <br/>
-You can reach me at: <${data.emailQuestion}> 
+You can reach me for additional questions at: <${data.emailQuestion}> 
 
 ${renderLicenseSection(data.license)} 
 `;
