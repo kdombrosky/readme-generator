@@ -1,8 +1,8 @@
-# d
+# ReadMe Generator
 
 ## Description 
-<p>d</p>
-<p>undefined</p>
+![MIT](https://img.shields.io/badge/license-MIT-informational) ![ISC](https://img.shields.io/badge/license-ISC-informational)<br/>
+This project allows the user to generate a ReadMe for their project by filling in the prompts. 
 
 ## Table of Contents 
 * [Installation](#installation)
@@ -13,21 +13,20 @@
 * [License](#license) 
 
 ## Installation 
-d
+First you 
 
 ## Usage
-d
+Once installed, 
 
 ## Contributing
-dd
+Kayla Dombrosky
 
 ## Tests
-d
+Try to 
 
 ## Questions
-My GitHub: [d](https://github.com/d) <br/>
-You can reach me at: <d> 
+My GitHub: [kdombrosky](https://github.com/kdombrosky) <br/>
+You can reach me at: <kdombroskyy@live.com> 
 
 ## License 
-This project is licensed with: MIT, Apache License 2.0
-   
+This project is licensed with: MIT, Apache License 2.0, ISC 

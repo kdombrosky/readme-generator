@@ -1,53 +1,38 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-
-const licenseArr = [
-  { 
-    license: 'MIT',
-    url: `![license](https://img.shields.io/badge/license-MIT-informational)`
-  },
-  { 
-    license: 'Apache License 2.0',
-    url: `![license](https://img.shields.io/badge/license-Apashe%202.0-informational)`
-  }
-]
-
 function renderLicenseBadge(license) {
   if (license.length === 0) { return ''; }
-  // else {
-  //   license.forEach(licenseItem => {
-  //     console.log(licenseItem);
-  //     if(licenseItem === 'MIT') {
-  //       badgeArr.push(`https://img.shields.io/badge/license-MIT-informational`);
-  //       console.log(badgeArr);
-  //     }
-  //   if(licenseItem === 'Apache License 2.0') {
-  //     badgeArr.push(`https://img.shields.io/badge/license-Apashe%202.0-informational`);
-  //       console.log(badgeArr);
-  //   }
-  //   // if(licenseItem === )
-  //   // if(licenseItem === )
-  //   // if(licenseItem === )
-  //   })
-  // }
-  else {
-    license.filter(item => {
-      if(item === 'MIT') {
-        return `![license](https://img.shields.io/badge/license-MIT-informational)`;
-      }
-    })
+
+  // Add badge icon if user selected badge 
+  let badgeArr = [];
+  for(i=0; i<license.length;i++) {
+    if(license[i] === 'MIT') {
+      badgeArr.push(`![MIT](https://img.shields.io/badge/license-MIT-informational)`);
+    }
+    if(license[i] === 'Apashe License 2.0') {
+      badgeArr.push(`![Apashe](https://img.shields.io/badge/license-Apashe%202.0-informational)`);
+    }
+    if(license[i] === 'ISC') {
+      badgeArr.push(`![ISC](https://img.shields.io/badge/license-ISC-informational)`);
+    }
+    if(license[i] === 'GNU GPLv3') {
+      badgeArr.push(`![GNU GPLv3](https://img.shields.io/badge/license-MITV3-informational)`);
+    }
+    if(license[i] === 'GNU GPLv2') {
+      badgeArr.push(`![GNU GPLv2](https://img.shields.io/badge/license-MITV2-informational)`);
+    }
   }
 
-  const badgeArr = license.filter(item => {
-    if()
-  })
+  return `${badgeArr.join(' ')}`;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license.length === 0) { return ''; } 
-  else { return `* [License](#license)`}
+  else { 
+    return `* [License](#license)`;
+  }
 }
 
 // TODO: Create a function that returns the license section of README
@@ -56,9 +41,7 @@ function renderLicenseSection(license) {
   if (license.length === 0) { return ''; } 
   else {
   return `## License 
-This project is licensed with: ${license.join(', ')}
-  `;
-  }
+This project is licensed with: ${license.join(', ')}`}
 }
 
 // TODO: Create a function to generate markdown for README
@@ -66,8 +49,8 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 ## Description 
-<p>${data.description}</p>
-<p>${renderLicenseBadge(data.license)}</p>
+${renderLicenseBadge(data.license)}<br/>
+${data.description}
 
 ## Table of Contents 
 * [Installation](#installation)
