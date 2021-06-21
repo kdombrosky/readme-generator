@@ -7,19 +7,19 @@ function renderLicenseBadge(license) {
   let badgeArr = [];
   for(i=0; i<license.length;i++) {
     if(license[i] === 'MIT') {
-      badgeArr.push(`![MIT](https://img.shields.io/badge/license-MIT-informational)`);
+      badgeArr.push(`![MIT](https://img.shields.io/badge/license-MIT-green)`);
     }
-    if(license[i] === 'Apashe License 2.0') {
-      badgeArr.push(`![Apashe](https://img.shields.io/badge/license-Apashe%202.0-informational)`);
+    else if(license[i] === 'Apache License 2.0') {
+      badgeArr.push(`![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-informational)`);
     }
-    if(license[i] === 'ISC') {
-      badgeArr.push(`![ISC](https://img.shields.io/badge/license-ISC-informational)`);
+    else if(license[i] === 'ISC') {
+      badgeArr.push(`![ISC](https://img.shields.io/badge/license-ISC-blue)`);
     }
-    if(license[i] === 'GNU GPLv3') {
-      badgeArr.push(`![GNU GPLv3](https://img.shields.io/badge/license-MITV3-informational)`);
+    else if(license[i] === 'GNU GPLv3') {
+      badgeArr.push(`![GNU GPLv3](https://img.shields.io/badge/license-MITV3-blue)`);
     }
-    if(license[i] === 'GNU GPLv2') {
-      badgeArr.push(`![GNU GPLv2](https://img.shields.io/badge/license-MITV2-informational)`);
+    else if(license[i] === 'GNU GPLv2') {
+      badgeArr.push(`![GNU GPLv2](https://img.shields.io/badge/license-MITV2-blue)`);
     }
   }
 
@@ -41,7 +41,7 @@ function renderLicenseSection(license) {
   if (license.length === 0) { return ''; } 
   else {
   return `## License 
-This project is licensed with: ${license.join(', ')}`}
+This project is licensed with: ${license.join(',  ')}`}
 }
 
 // TODO: Create a function to generate markdown for README
@@ -49,8 +49,8 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 ## Description 
-${renderLicenseBadge(data.license)}<br/>
-${data.description}
+${data.description}<br/>
+${renderLicenseBadge(data.license)}
 
 ## Table of Contents 
 * [Installation](#installation)
