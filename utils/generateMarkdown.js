@@ -13,13 +13,13 @@ function renderLicenseBadge(license) {
       badgeArr.push(`![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-informational)`);
     }
     else if(license[i] === 'ISC') {
-      badgeArr.push(`![ISC](https://img.shields.io/badge/license-ISC-blue)`);
+      badgeArr.push(`![ISC](https://img.shields.io/badge/license-ISC-blueviolet)`);
     }
     else if(license[i] === 'GNU GPLv3') {
       badgeArr.push(`![GNU GPLv3](https://img.shields.io/badge/license-MITV3-blue)`);
     }
     else if(license[i] === 'GNU GPLv2') {
-      badgeArr.push(`![GNU GPLv2](https://img.shields.io/badge/license-MITV2-blue)`);
+      badgeArr.push(`![GNU GPLv2](https://img.shields.io/badge/license-MITV2-9cf)`);
     }
   }
 
@@ -49,7 +49,7 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 ## Description 
-${data.description}<br/>
+${data.description}<br/><br/>
 ${renderLicenseBadge(data.license)}
 
 ## Table of Contents 

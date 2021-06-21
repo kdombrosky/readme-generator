@@ -106,7 +106,7 @@ const questions = [
     { // Questions - email address -> add instructions on how to reach 
         type: 'input',
         name: 'emailQuestion',
-        message: 'Please enter your email: ',
+        message: 'Please enter your email for contact: ',
         validate: emailInput => {
             if(emailInput) {
                 return true;
