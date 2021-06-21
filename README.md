@@ -27,7 +27,7 @@ Kayla Dombrosky
 
 
 ## Questions
-My GitHub: [qw3rqwerq](https://github.com/kdombrosky) <br/>
+My GitHub: [kdombrosky](https://github.com/kdombrosky) <br/>
 You can reach me for more information at: <kdombroskyy@live.com> 
 
 ## License 
