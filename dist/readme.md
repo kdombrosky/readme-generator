@@ -1,8 +1,8 @@
-# sdfgsdfgsdfgsdfgwertwert
+# README Generator
 
 ## Description 
-qweasdfasdfasdf<br/><br/>
-![MIT](https://img.shields.io/badge/license-MIT-green) ![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-informational) ![ISC](https://img.shields.io/badge/license-ISC-blue) ![GNU GPLv3](https://img.shields.io/badge/license-MITV3-blue) ![GNU GPLv2](https://img.shields.io/badge/license-MITV2-blue)
+A CLI that accepts user inputs to generate a README<br/><br/>
+![MIT](https://img.shields.io/badge/license-MIT-green) ![ISC](https://img.shields.io/badge/license-ISC-blueviolet)
 
 ## Table of Contents 
 * [Installation](#installation)
@@ -13,20 +13,20 @@ qweasdfasdfasdf<br/><br/>
 * [License](#license) 
 
 ## Installation 
-jtyurtyurty
+Clone from GitHub and run "npm i"
 
 ## Usage
-asdfasdfasdf
+Run "node index" from the Develop folder to begin! 
 
 ## Contributing
-qwerqwerqwer
+Kayla Dombrosky
 
 ## Tests
-adsfasdfasf
+Test instructions here
 
 ## Questions
-My GitHub: [qw3rqwerq](https://github.com/qw3rqwerq) <br/>
-You can reach me at: <adsfa> 
+My GitHub: [kdombrosky](https://github.com/kdombrosky) <br/>
+You can reach me for additional questions at: <kdombroskyy@live.com> 
 
 ## License 
-This project is licensed with: MIT,  Apache License 2.0,  ISC,  GNU GPLv3,  GNU GPLv2 
+This project is licensed with: MIT,  ISC 
