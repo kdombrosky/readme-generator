@@ -5,6 +5,7 @@ This is a CLI app that prompts users for various inputs about their project, to 
 This will require installation and instructions below. 
 <br/><br/>
 Link to walkthrough: https://drive.google.com/file/d/1lBcpIQ3esix3IDuI-bB_cHPQBMf19iBl/view
+![README generator preview](https://github.com/kdombrosky/readme-generator/blob/main/extra/preview.png?raw=true)
 <br/><br/>
 ![MIT](https://img.shields.io/badge/license-MIT-green) 
 
